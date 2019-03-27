@@ -143,7 +143,7 @@ body{
 
 /* score */
 #bodycontainer3{
-    background-image: url(../res/1.png);
+    background-image: url(1.png);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     width: 100%;
     display: none;
