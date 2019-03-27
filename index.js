@@ -104,6 +104,7 @@ function submitData(){
 function totalscore(score) {
 	const fb = firebase.database().ref();
 	var data = {total_score:score};
+	pushTotalScore(score);
 	fb.child('users/'+document.getElementById("inputNickname").value).update(data);
 }
 
