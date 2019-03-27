@@ -106,3 +106,10 @@ function totalscore(score) {
 	var data = {total_score:score};
 	fb.child('users/'+document.getElementById("inputNickname").value).update(data);
 }
+
+function pushTotalScore(score){
+	var firebaseRef = firebase.database().ref('leaderboard/'+document.getElementById("inputNickname").value);
+	firebaseRef.set({
+		total_score : score
+	});
+}
