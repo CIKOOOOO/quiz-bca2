@@ -3,6 +3,8 @@ function submitClick(){
 	var inputNickname = document.getElementById("inputNickname").value;
 	var checkNick = firebase.database().ref("users");
 
+	loadsc();
+
 	checkNick.once("value")
 	.then(function(snapshot){
 		if(snapshot.hasChild(inputNickname)){
@@ -36,6 +38,10 @@ function submitClick(){
 			});
 		}
 	});	
+}
+
+function loadsc(){
+	document.getElementById("lds-ring").style.visibility = "visible";
 }
 
 function trueCond(){

@@ -39,6 +39,8 @@
 				<!-- </form> -->
 				
 		</div>
+
+		<div id="lds-ring"><div></div><div></div><div></div><div></div></div>
 	</div>
 	
 	<!-- screen 2 -->
