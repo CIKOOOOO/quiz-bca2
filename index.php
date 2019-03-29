@@ -81,7 +81,7 @@
 				<div class="question">Fitur apa yang tidak ada di Go-Jek?</div> 
 		
 				<div class="ansrow-1">
-					<input id="ans-9" type="radio" name="question3" value="a">Go-Jek<br>
+					<input id="ans-9" type="radio" name="question3" value="a">Go-Ride<br>
 					<input id="ans-10" type="radio" name="question3" value="b">Go-Car
 				</div>
 				<div class="ansrow-2">
