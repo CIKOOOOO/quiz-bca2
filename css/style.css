@@ -4,7 +4,7 @@ body{
 }
 
 #gone{
-    display: hidden;
+    display: none;
 }
 
 #bodycontainer1{
