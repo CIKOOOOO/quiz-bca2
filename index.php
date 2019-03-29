@@ -117,7 +117,8 @@
 				</div>
 			</div>
 	
-			<button class="btn" onclick="submitData()">Submit</button>
+			<button id="btn" onclick="submitClick()">submit</button>
+			<button id="btn_total" onclick="showTotalScore()">show total score</button>
 		</div>
 	</div>
 
