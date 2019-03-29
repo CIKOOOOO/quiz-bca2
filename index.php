@@ -106,7 +106,7 @@
 				</div>
 				<div class="ansrow-2">
 					<input id="ans-15" type="radio" name="question4" value="c">Rp.20,000<br>
-					<input id="ans-16" type="radio" name="question4" value="d" onclick="clicked4()>Rp.500,000
+					<input id="ans-16" type="radio" name="question4" value="d" onclick="clicked4()">Rp.500,000
 				</div>
 			</div>
 			<div class="box">
@@ -114,7 +114,7 @@
 			<div class="question">Dimana Kita tidak bisa mengisi saldo Go-Pay?</div> 
 	
 			<div class="ansrow-1">
-				<input id="ans-17" type="radio" name="question5" value="a" onclick="clicked5()>Jalanan<br>
+				<input id="ans-17" type="radio" name="question5" value="a" onclick="clicked5()">Jalanan<br>
 				<input id="ans-18" type="radio" name="question5" value="b">ATM
 			</div>
 			<div class="ansrow-2">
