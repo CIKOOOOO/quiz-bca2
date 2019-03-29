@@ -1,5 +1,4 @@
 var downloadTimer;
-var time1 = 1,time2 = 1,time3 = 1,time4 = 1,time5 = 1;
 
 function showTotalScore(){
 	var firebaseRef = firebase.database();
@@ -41,7 +40,6 @@ function showTotalScore(){
 		}
 	});	
 }
-
 
 function submitClick(){
 	var firebaseRef = firebase.database();
@@ -120,11 +118,10 @@ function trueCond(){
 			submitData();
 			clearInterval(downloadTimer);
 		}
-			
 	}, 1000);
 }
 
-+function clicked1(){
+function clicked1(){
 	document.getElementById("quest1").setAttribute("value",document.getElementById("progressBar").value);
 	// document.getElementById("ans-2").addEventListener("click",function(event){
 	// 	console.log(document.getElementById("progressBar").value);
@@ -170,7 +167,6 @@ function clicked5(){
 	// 	// time5 = document.getElementById("progressBar").value;
 	// });
 }
-
 
 
 function getValue(){
@@ -228,7 +224,7 @@ function submitData(){
 	firebase.database()
 	.ref(`users/${document.getElementById("inputNickname").value}/`)
 	.once("value", snapshot => {
-		
+
 		var quiz = {};
 		var total_point = 0;
 
@@ -259,3 +255,5 @@ function pushTotalScore(score){
 		total_score : score
 	});
 }
+
+

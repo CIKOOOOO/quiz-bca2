@@ -26,7 +26,6 @@
 	<script src="index.js"></script>
 </head>
 <body id="body">
-	<!-- screen1 -->
 	<div id="gone">
 		<input type="text" id="quest1">
 		<input type="text" id="quest2">
@@ -35,6 +34,7 @@
 		<input type="text" id="quest5">
 	</div>
 	
+	<!-- screen1 -->
 	<div id="bodycontainer1">
 		<div class="container1">
 			<h1>Quiz Bca</h1>
@@ -42,7 +42,7 @@
 					<div class="nickbox">
 						<input type="text" id="inputNickname" placeholder="masukan nickname" name="nickname" required> <br>
 					</div>
-					<button id="btn" onclick="submitClick()">Submit</button>
+					<button id="btn" onclick="submitClick()">submit</button>
 					<button id="btn_total" onclick="showTotalScore()">show total score</button>
 					<!-- <input id="btn" type="submit" value="submit"> -->
 				<!-- </form> -->
@@ -55,54 +55,52 @@
 	<!-- screen 2 -->
 	<div id="bodycontainer2">
 		<div class="container2">
-		<progress value="0" max="25" id="progressBar"></progress>
+			<progress value="0" max="25" id="progressBar"></progress>
 			<div class="box">
 				<img src="/res/bca.png" width="100px" height="100px" alt="qimg">
 				<div class="question">Warna logo BCA?</div> 
 	
 				<div class="ansrow-1">
-					 <input id="ans-1" type="radio" name="question1" value="a">  Kelabu <br>
+					 <input id="ans-1" type="radio" name="question1" value="a">  Kelabu  <br>
 					 <input id="ans-2" type="radio" name="question1" value="b">  Hijau
 				</div>
 				<div class="ansrow-2">
-					 <input id="ans-3" type="radio" name="question1" value="c" onclick="clicked1()>  Biru <br>
+					 <input id="ans-3" type="radio" name="question1" value="c" onclick="clicked1()">  Biru <br>
 					 <input id="ans-4" type="radio" name="question1" value="d">  Saya buta warna
 				</div>
 			</div>
 	
 			<div class="box">
-					<img src="/res/wheel1.png" width="100px" height="100px" alt="qimg">
-					<div class="question">Gambar logo Go-Jek?</div> 
+				<img src="/res/wheel1.png" width="100px" height="100px" alt="qimg">
+				<div class="question">Gambar logo Go-Jek?</div> 
 		
-					<div class="ansrow-1">
-						<input id="ans-5" type="radio" name="question2" value="a">Kapal Pesiar<br>
-						<input id="ans-6" type="radio" name="question2" value="b">Pesawat
-				   </div>
-				   <div class="ansrow-2">
-						<input id="ans-7" type="radio" name="question2" value="c">Roket<br>
-						<input id="ans-8" type="radio" name="question2" value="d" onclick="clicked2()>Motor
-				   </div>
+				<div class="ansrow-1">
+					<input id="ans-5" type="radio" name="question2" value="a">Kapal Pesiar<br>
+					<input id="ans-6" type="radio" name="question2" value="b" >Pesawat
+				</div>
+				<div class="ansrow-2">
+					<input id="ans-7" type="radio" name="question2" value="c" >Roket<br>
+					<input id="ans-8" type="radio" name="question2" value="d" onclick="clicked2()">Motor
+				</div>
 			</div>
-
 			<div class="box">
 				<img src="/res/wheel1.png" width="100px" height="100px" alt="qimg">
 				<div class="question">Fitur apa yang tidak ada di Go-Jek?</div> 
-		
+	
 				<div class="ansrow-1">
 					<input id="ans-9" type="radio" name="question3" value="a">Go-Ride<br>
-					<input id="ans-10" type="radio" name="question3" value="b">Go-Car
-				</div>
-				<div class="ansrow-2">
+					<input id="ans-10" type="radio" name="question3" value="b" >Go-Car
+			   </div>
+			   <div class="ansrow-2">
 					<input id="ans-11" type="radio" name="question3" value="c">Go-Send<br>
-					<input id="ans-12" type="radio" name="question3" value="d" onclick="clicked3()>Go-Message
-				</div>
+					<input id="ans-12" type="radio" name="question3" value="d" onclick="clicked3()">Go-Message
+			   </div>
 			</div>
-
 			<div class="box">
 				<img src="/res/wheel1.png" width="100px" height="100px" alt="qimg">
 				<div class="question">Berapa besar saldo minimum untuk membuka rekening tahapan BCA?</div> 
-		
-				<div class="ansrow-1">
+	
+			<div class="ansrow-1">
 					<input id="ans-13" type="radio" name="question4" value="a">Rp.0<br>
 					<input id="ans-14" type="radio" name="question4" value="b">Rp.1
 				</div>
@@ -111,22 +109,21 @@
 					<input id="ans-16" type="radio" name="question4" value="d" onclick="clicked4()>Rp.500,000
 				</div>
 			</div>
-
 			<div class="box">
-				<img src="/res/wheel1.png" width="100px" height="100px" alt="qimg">
-				<div class="question">Dimana Kita tidak bisa mengisi saldo Go-Pay?</div> 
-		
-				<div class="ansrow-1">
-					<input id="ans-17" type="radio" name="question5" value="a" onclick="clicked5()>Jalanan<br>
-					<input id="ans-18" type="radio" name="question5" value="b">ATM
-				</div>
-				<div class="ansrow-2">
-					<input id="ans-19" type="radio" name="question5" value="c">Minimarket<br>
-					<input id="ans-20" type="radio" name="question5" value="d">Supir Go-Jek
-				</div>
+			<img src="/res/wheel1.png" width="100px" height="100px" alt="qimg">
+			<div class="question">Dimana Kita tidak bisa mengisi saldo Go-Pay?</div> 
+	
+			<div class="ansrow-1">
+				<input id="ans-17" type="radio" name="question5" value="a" onclick="clicked5()>Jalanan<br>
+				<input id="ans-18" type="radio" name="question5" value="b">ATM
+			</div>
+			<div class="ansrow-2">
+				<input id="ans-19" type="radio" name="question5" value="c">Minimarket<br>
+				<input id="ans-20" type="radio" name="question5" value="d">Supir Go-Jek
+			</div>
 			</div>
 	
-			<button id="btn" onclick="submitClick()">submit</button>
+			<button class="btn" onclick="submitData()">Submit</button>
 		</div>
 	</div>
 
@@ -137,8 +134,8 @@
 			<h1>Your Score</h1>
 			<div id="score">00</div>
 	
-			<div class="tf">
-			<div class="tf1">
+			<div id="tf">
+				<div class="tf1">
 						1. <span id="p1"></span><br>
 						2. <span id="p2"></span><br>
 						3. <span id="p3"></span><br>
@@ -162,6 +159,7 @@
 						19. <span id="p19"></span><br>
 						20. <span id="p20"></span>
 				</div>
+
 			</div>
 		</div>
 	</div>
