@@ -64,6 +64,19 @@ body{
     cursor: pointer;
 }
 
+.container1 #btn_total{
+    width: 60%;
+    height: 55px;
+    background: grey;
+    border-radius: 5px;
+    margin: 14px auto;
+    display: block;
+    font-size: 23px;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
 /* mainquiz */
 
 #bodycontainer2{
@@ -192,7 +205,10 @@ body{
     font-size: 18px;
 }
 
-
+#tf .tf1, .tf2{
+    width: 50%;
+    float: left;
+}
 
 
 

@@ -35,6 +35,7 @@
 						<input type="text" id="inputNickname" placeholder="masukan nickname" name="nickname" required> <br>
 					</div>
 					<button id="btn" onclick="submitClick()">Submit</button>
+					<button id="btn_total" onclick="showTotalScore()">show total score</button>
 					<!-- <input id="btn" type="submit" value="submit"> -->
 				<!-- </form> -->
 				
@@ -80,7 +81,7 @@
 				<div class="question">Fitur apa yang tidak ada di Go-Jek?</div> 
 		
 				<div class="ansrow-1">
-					<input id="ans-9" type="radio" name="question3" value="a">Go-Jek<br>
+					<input id="ans-9" type="radio" name="question3" value="a">Go-Ride<br>
 					<input id="ans-10" type="radio" name="question3" value="b">Go-Car
 				</div>
 				<div class="ansrow-2">
@@ -117,7 +118,7 @@
 				</div>
 			</div>
 	
-			<button class="btn" onclick="submitData()">Submit</button>
+			<button id="btn" onclick="submitClick()">submit</button>
 		</div>
 	</div>
 

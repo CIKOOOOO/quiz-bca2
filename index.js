@@ -1,6 +1,48 @@
 var downloadTimer;
 var time1 = 1,time2 = 1,time3 = 1,time4 = 1,time5 = 1;
 
+function showTotalScore(){
+	var firebaseRef = firebase.database();
+	var inputNickname = document.getElementById("inputNickname").value;
+	var checkNick = firebase.database().ref("users");
+
+	loadsc();
+
+	checkNick.once("value")
+	.then(function(snapshot){
+		if(snapshot.hasChild(inputNickname)){
+			document.getElementById("bodycontainer1").style.display = "none";
+			document.getElementById("bodycontainer3").style.display = "block";
+			document.getElementById("bodycontainer2").style.display = "none";
+			document.getElementById("nickname").innerHTML = document.getElementById("inputNickname").value;
+
+			firebase.database()
+			.ref(`users/${document.getElementById("inputNickname").value}/`)
+			.once("value", snapshot => {
+
+				var quiz = {};
+				var total_point = 0;
+
+				for (let index = 1; index <= 20; index++) {
+					quiz[index] = snapshot.child("quiz"+index).val();
+				}
+
+				for (let index = 1; index <= 20; index++) {
+					document.getElementById("p"+index).innerHTML = quiz[index];
+					total_point += quiz[index];
+				}
+
+				document.getElementById("score").innerHTML = total_point;
+			});
+		}
+		else{
+			window.alert("Nickname is not available");
+			removeLoad();
+		}
+	});	
+}
+
+
 function submitClick(){
 	var firebaseRef = firebase.database();
 	var inputNickname = document.getElementById("inputNickname").value;
@@ -14,6 +56,7 @@ function submitClick(){
 			firebase.database().ref(`users/${inputNickname}/`).once("value", snapshot => {
 				if (snapshot.child("quiz6").val() != 0 || snapshot.child("quiz7").val() != 0){
 					window.alert("Cannot enter the game");
+					removeLoad();
 				 }
 				 else{
 					trueCond();
@@ -46,6 +89,7 @@ function submitClick(){
 			},function(error){
 				if(error){
 					window.alert("Error");
+					removeLoad();
 				}
 				else{
 					trueCond();
@@ -57,6 +101,10 @@ function submitClick(){
 
 function loadsc(){
 	document.getElementById("lds-ring").style.visibility = "visible";
+}
+
+function removeLoad(){
+	document.getElementById("lds-ring").style.visibility = "hidden";
 }
 
 function trueCond(){
