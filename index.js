@@ -27,6 +27,18 @@ function submitClick(){
 				quiz6 : 0,
 				quiz7 : 0,
 				quiz8 : 0,
+				quiz9 : 0,
+				quiz10 : 0,
+				quiz11 : 0,
+				quiz12 : 0,
+				quiz13 : 0,
+				quiz14 : 0,
+				quiz15 : 0,
+				quiz16 : 0,
+				quiz17 : 0,
+				quiz18 : 0,
+				quiz19 : 0,
+				quiz20 : 0,
 				total_score : 0
 			},function(error){
 				if(error){
@@ -62,7 +74,7 @@ function trueCond(){
 }
 
 function getValue(){
-	var ans1 = 0,ans2 = 0;
+	var ans1 = 0, ans2 = 0, ans3=0, ans4=0, ans5 = 0;
 	if(document.getElementById('ans-3').checked){
 		ans1 += 20;
 	}
@@ -71,14 +83,36 @@ function getValue(){
 	if(document.getElementById('ans-8').checked){
 		ans2 += 20;
 	}
+
 	else ans2 += 5;
 
-	updateData(ans1,ans2);
+	if(document.getElementById('ans-12').checked){
+		ans3 += 20;
+	}
+	else ans3 += 5;
+
+	if(document.getElementById('ans-16').checked){
+		ans4 += 20;
+	}
+	else ans4 += 5;
+
+	if(document.getElementById('ans-17').checked){
+		ans5 += 20;
+	}
+	else ans5 += 5;
+
+	updateData(ans1,ans2,ans3,ans4,ans5);
 }
 
-function updateData(q1, q2) {
+function updateData(q1, q2, q3, q4, q5) {
 	const fb = firebase.database().ref();
-	var data = {quiz3:q1,quiz4:q2};
+	var data = {
+		quiz6:q1,
+		quiz7:q2,
+		quiz8:q3,
+		quiz9:q4,
+		quiz10:q5
+	};
 	fb.child('users/'+document.getElementById("inputNickname").value).update(data);
 }
 
@@ -92,16 +126,19 @@ function submitData(){
 	firebase.database()
 	.ref(`users/${document.getElementById("inputNickname").value}/`)
 	.once("value", snapshot => {
-		var quiz1 = snapshot.child("quiz1").val();
-		var quiz2 = snapshot.child("quiz2").val();
-		var quiz3 = snapshot.child("quiz3").val();
-		var quiz4 = snapshot.child("quiz4").val();
-		document.getElementById("p1").innerHTML = quiz1;
-		document.getElementById("p2").innerHTML = quiz2;
-		document.getElementById("p3").innerHTML = quiz3;
-		document.getElementById("p4").innerHTML = quiz4;
-		var total_point = parseInt(quiz1) + parseInt(quiz3) 
-		+ parseInt(quiz2) + parseInt(quiz4);
+		
+		var quiz = {};
+		var total_point = 0;
+
+		for (let index = 1; index <= 20; index++) {
+			quiz[index] = snapshot.child("quiz"+index).val();
+		}
+
+		for (let index = 1; index <= 20; index++) {
+			document.getElementById("p"+index).innerHTML = quiz[index];
+			total_point += quiz[index];
+		}
+
 		document.getElementById("score").innerHTML = total_point;
 		totalscore(total_point);
 	});

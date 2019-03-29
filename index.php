@@ -73,9 +73,51 @@
 						<input id="ans-7" type="radio" name="question2" value="c">Roket<br>
 						<input id="ans-8" type="radio" name="question2" value="d">Motor
 				   </div>
+			</div>
+
+			<div class="box">
+				<img src="/res/wheel1.png" width="100px" height="100px" alt="qimg">
+				<div class="question">Fitur apa yang tidak ada di Go-Jek?</div> 
+		
+				<div class="ansrow-1">
+					<input id="ans-9" type="radio" name="question3" value="a">Go-Jek<br>
+					<input id="ans-10" type="radio" name="question3" value="b">Go-Car
 				</div>
+				<div class="ansrow-2">
+					<input id="ans-11" type="radio" name="question3" value="c">Go-Send<br>
+					<input id="ans-12" type="radio" name="question3" value="d">Go-Song
+				</div>
+			</div>
+
+			<div class="box">
+				<img src="/res/wheel1.png" width="100px" height="100px" alt="qimg">
+				<div class="question">Berapa besar saldo minimum untuk membuka rekening tahapan BCA?</div> 
+		
+				<div class="ansrow-1">
+					<input id="ans-13" type="radio" name="question4" value="a">Rp.0<br>
+					<input id="ans-14" type="radio" name="question4" value="b">Rp.1
+				</div>
+				<div class="ansrow-2">
+					<input id="ans-15" type="radio" name="question4" value="c">Rp.20,000<br>
+					<input id="ans-16" type="radio" name="question4" value="d">Rp.500,000
+				</div>
+			</div>
+
+			<div class="box">
+				<img src="/res/wheel1.png" width="100px" height="100px" alt="qimg">
+				<div class="question">Dimana Kita tidak bisa mengisi saldo Go-Pay?</div> 
+		
+				<div class="ansrow-1">
+					<input id="ans-17" type="radio" name="question5" value="a">Jalanan<br>
+					<input id="ans-18" type="radio" name="question5" value="b">ATM
+				</div>
+				<div class="ansrow-2">
+					<input id="ans-19" type="radio" name="question5" value="c">Minimarket<br>
+					<input id="ans-20" type="radio" name="question5" value="d">Supir Go-Jek
+				</div>
+			</div>
 	
-				<button class="btn" onclick="submitData()">Submit</button>
+			<button class="btn" onclick="submitData()">Submit</button>
 		</div>
 	</div>
 
@@ -87,10 +129,30 @@
 			<div id="score">00</div>
 	
 			<div class="tf">
-				1. <span id="p1"></span><br><br>
-				2. <span id="p2"></span><br><br>
-				3. <span id="p3"></span><br><br>
-				4. <span id="p4"></span>
+			<div class="tf1">
+						1. <span id="p1"></span><br>
+						2. <span id="p2"></span><br>
+						3. <span id="p3"></span><br>
+						4. <span id="p4"></span><br>
+						5. <span id="p5"></span><br><br>
+						6. <span id="p6"></span><br>
+						7. <span id="p7"></span><br>
+						8. <span id="p8"></span><br>
+						9. <span id="p9"></span><br>
+						10. <span id="p10"></span>
+				</div>
+				<div class="tf2">
+						11. <span id="p11"></span><br>
+						12. <span id="p12"></span><br>
+						13. <span id="p13"></span><br>
+						14. <span id="p14"></span><br>
+						15. <span id="p15"></span><br><br>
+						16. <span id="p16"></span><br>
+						17. <span id="p17"></span><br>
+						18. <span id="p18"></span><br>
+						19. <span id="p19"></span><br>
+						20. <span id="p20"></span>
+				</div>
 			</div>
 		</div>
 	</div>
