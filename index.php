@@ -46,7 +46,7 @@
 	<!-- screen 2 -->
 	<div id="bodycontainer2">
 		<div class="container2">
-			<progress value="0" max="15" id="progressBar"></progress>
+		<progress value="0" max="25" id="progressBar"></progress>
 			<div class="box">
 				<img src="/res/bca.png" width="100px" height="100px" alt="qimg">
 				<div class="question">Warna logo BCA?</div> 
@@ -56,7 +56,7 @@
 					 <input id="ans-2" type="radio" name="question1" value="b">  Hijau
 				</div>
 				<div class="ansrow-2">
-					 <input id="ans-3" type="radio" name="question1" value="c">  Biru <br>
+					 <input id="ans-3" type="radio" name="question1" value="c" onclick="clicked1()>  Biru <br>
 					 <input id="ans-4" type="radio" name="question1" value="d">  Saya buta warna
 				</div>
 			</div>
@@ -71,7 +71,7 @@
 				   </div>
 				   <div class="ansrow-2">
 						<input id="ans-7" type="radio" name="question2" value="c">Roket<br>
-						<input id="ans-8" type="radio" name="question2" value="d">Motor
+						<input id="ans-8" type="radio" name="question2" value="d" onclick="clicked2()>Motor
 				   </div>
 			</div>
 
@@ -85,7 +85,7 @@
 				</div>
 				<div class="ansrow-2">
 					<input id="ans-11" type="radio" name="question3" value="c">Go-Send<br>
-					<input id="ans-12" type="radio" name="question3" value="d">Go-Message
+					<input id="ans-12" type="radio" name="question3" value="d" onclick="clicked3()>Go-Message
 				</div>
 			</div>
 
@@ -99,7 +99,7 @@
 				</div>
 				<div class="ansrow-2">
 					<input id="ans-15" type="radio" name="question4" value="c">Rp.20,000<br>
-					<input id="ans-16" type="radio" name="question4" value="d">Rp.500,000
+					<input id="ans-16" type="radio" name="question4" value="d" onclick="clicked4()>Rp.500,000
 				</div>
 			</div>
 
@@ -108,7 +108,7 @@
 				<div class="question">Dimana Kita tidak bisa mengisi saldo Go-Pay?</div> 
 		
 				<div class="ansrow-1">
-					<input id="ans-17" type="radio" name="question5" value="a">Jalanan<br>
+					<input id="ans-17" type="radio" name="question5" value="a" onclick="clicked5()>Jalanan<br>
 					<input id="ans-18" type="radio" name="question5" value="b">ATM
 				</div>
 				<div class="ansrow-2">

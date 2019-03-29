@@ -1,3 +1,6 @@
+var downloadTimer;
+var time1 = 1,time2 = 1,time3 = 1,time4 = 1,time5 = 1;
+
 function submitClick(){
 	var firebaseRef = firebase.database();
 	var inputNickname = document.getElementById("inputNickname").value;
@@ -61,9 +64,9 @@ function trueCond(){
 	document.getElementById("bodycontainer3").style.display = "none";
 	document.getElementById("bodycontainer2").style.display = "block";
 
-	var timeleft = 15;
-	var downloadTimer = setInterval(function(){
-		document.getElementById("progressBar").value = 15 - timeleft;
+	var timeleft = 25;
+	downloadTimer = setInterval(function(){
+		document.getElementById("progressBar").value = 25 - timeleft;
 		timeleft -= 1;
 		if(timeleft == -2){
 			submitData();
@@ -73,33 +76,84 @@ function trueCond(){
 	}, 1000);
 }
 
++function clicked1(){
+	document.getElementById("quest1").setAttribute("value",document.getElementById("progressBar").value);
+	// document.getElementById("ans-2").addEventListener("click",function(event){
+	// 	console.log(document.getElementById("progressBar").value);
+	// 	document.getElementById("quest1").setAttribute("value",document.getElementById("progressBar").value);
+	// });
+}
+
+function clicked2(){
+	document.getElementById("quest2").setAttribute("value",document.getElementById("progressBar").value);
+	// document.getElementById("ans-7").addEventListener("click",function(event){
+	// 	console.log(document.getElementById("progressBar").value);
+	// 	document.getElementById("quest2").setAttribute("value",document.getElementById("progressBar").value);
+	
+	// 	// time2 = document.getElementById("progressBar").value;
+	// });
+}
+
+function clicked3(){
+	document.getElementById("quest3").setAttribute("value",document.getElementById("progressBar").value);
+	// document.getElementById("ans-10").addEventListener("click",function(event){
+	// 	console.log(document.getElementById("progressBar").value);
+	// 	document.getElementById("quest3").setAttribute("value",document.getElementById("progressBar").value);
+	
+	// 	// time3 = document.getElementById("progressBar").value;
+	// });
+}
+
+function clicked4(){
+	document.getElementById("quest4").setAttribute("value",document.getElementById("progressBar").value);
+	// document.getElementById("ans-13").addEventListener("click",function(event){
+	// 	console.log(document.getElementById("progressBar").value);
+	// 	document.getElementById("quest4").setAttribute("value",document.getElementById("progressBar").value);
+	// 	// time4 = document.getElementById("progressBar").value;
+	// });
+}
+
+function clicked5(){
+	document.getElementById("quest5").setAttribute("value",document.getElementById("progressBar").value);
+		
+	// document.getElementById("ans-18").addEventListener("click",function(event){
+	// 	console.log(document.getElementById("progressBar").value);
+	// 	document.getElementById("quest5").setAttribute("value",document.getElementById("progressBar").value);
+	// 	// time5 = document.getElementById("progressBar").value;
+	// });
+}
+
+
+
 function getValue(){
 	var ans1 = 0, ans2 = 0, ans3=0, ans4=0, ans5 = 0;
 	if(document.getElementById('ans-3').checked){
-		ans1 += 20;
+		ans1 += 20*(25-parseInt(document.getElementById("quest1").value));
 	}
 	else ans1 += 5;
 
 	if(document.getElementById('ans-8').checked){
-		ans2 += 20;
+		ans2 += 20*(25-parseInt(document.getElementById("quest2").value));
 	}
 
 	else ans2 += 5;
 
 	if(document.getElementById('ans-12').checked){
-		ans3 += 20;
+		ans3 += 20*(25-parseInt(document.getElementById("quest3").value));
 	}
 	else ans3 += 5;
 
 	if(document.getElementById('ans-16').checked){
-		ans4 += 20;
+		ans4 += 20*(25-parseInt(document.getElementById("quest4").value));
 	}
 	else ans4 += 5;
 
 	if(document.getElementById('ans-17').checked){
-		ans5 += 20;
+		ans5 += 20*(25-parseInt(document.getElementById("quest5").value));
 	}
 	else ans5 += 5;
+
+	console.log(document.getElementById("quest1").value+" - "+document.getElementById("quest2").value+" - "+document.getElementById("quest3").value+" - "+document.getElementById("quest4").value+" - "+document.getElementById("quest5").value);
 
 	updateData(ans1,ans2,ans3,ans4,ans5);
 }
