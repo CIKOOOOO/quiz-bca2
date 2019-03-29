@@ -97,6 +97,7 @@
 			   </div>
 			</div>
 			<div class="box">
+				9
 				<img src="/res/wheel1.png" width="100px" height="100px" alt="qimg">
 				<div class="question">Berapa besar saldo minimum untuk membuka rekening tahapan BCA?</div> 
 	
