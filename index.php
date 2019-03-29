@@ -27,6 +27,14 @@
 </head>
 <body id="body">
 	<!-- screen1 -->
+	<div id="gone">
+		<input type="text" id="quest1">
+		<input type="text" id="quest2">
+		<input type="text" id="quest3">
+		<input type="text" id="quest4">
+		<input type="text" id="quest5">
+	</div>
+	
 	<div id="bodycontainer1">
 		<div class="container1">
 			<h1>Quiz Bca</h1>

@@ -3,6 +3,10 @@ body{
     padding: 0px;
 }
 
+#gone{
+    display: hidden;
+}
+
 #bodycontainer1{
     background-image: url("/../res/1.png");
     background-repeat: no-repeat;
