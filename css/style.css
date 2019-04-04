@@ -263,7 +263,7 @@ body{
 
   @media screen and (max-height: 290px) and (min-height: 280px) and (orientation: landscape){
     html{
-        background-image: url("../res/puter.png");
+        background-image: url("../res/portraitonly.png");
         background-repeat: no-repeat;
         background-size: cover;
     }
