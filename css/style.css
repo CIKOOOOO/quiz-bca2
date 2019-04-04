@@ -269,7 +269,7 @@ body{
     }
 
     .container1, #bodycontainer2, #bodycontainer3, .container2,.container3{
-        visibility: hidden;
+        display: none;
     }
 }
 
