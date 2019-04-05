@@ -45,6 +45,7 @@ function submitClick(){
 	var inputNickname = document.getElementById("inputNickname").value;
 	var finalNickname = inputNickname.replace(/\s+/g, '');
 	var checkNick = firebase.database().ref("users");
+	document.documentElement.scrollTop = 0;
 
 	if(finalNickname != ""){
 		loadsc();
@@ -230,6 +231,7 @@ function submitData(){
 	document.getElementById("bodycontainer3").style.display = "block";
 	document.getElementById("bodycontainer2").style.display = "none";
 	document.getElementById("nickname").innerHTML = finalNickname;
+	document.documentElement.scrollTop = 0;
 
 	firebase.database()
 	.ref(`users/${finalNickname}/`)
