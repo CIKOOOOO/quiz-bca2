@@ -1,6 +1,6 @@
 function showTotalScore(){
 	var firebaseRef = firebase.database();
-	var inputNickname = document.getElementById("inputNickname").value;
+	var inputNickname = document.getElementById("inputNickname").value.toLowerCase();
 	var finalNickname = inputNickname.replace(/\s+/g, '');
 	var checkNick = firebase.database().ref("users");
 
@@ -42,7 +42,7 @@ function showTotalScore(){
 
 function submitClick(){
 	var firebaseRef = firebase.database();
-	var inputNickname = document.getElementById("inputNickname").value;
+	var inputNickname = document.getElementById("inputNickname").value.toLowerCase();
 	var finalNickname = inputNickname.replace(/\s+/g, '');
 	var checkNick = firebase.database().ref("users");
 	document.documentElement.scrollTop = 0;
@@ -210,7 +210,7 @@ function getValue(){
 }
 
 function updateData(q1, q2, q3, q4, q5) {
-	var inputNickname = document.getElementById("inputNickname").value;
+	var inputNickname = document.getElementById("inputNickname").value.toLowerCase();
 	var finalNickname = inputNickname.replace(/\s+/g, '');
 	const fb = firebase.database().ref();
 	var data = {
@@ -224,7 +224,7 @@ function updateData(q1, q2, q3, q4, q5) {
 }
 
 function submitData(){
-	var inputNickname = document.getElementById("inputNickname").value;
+	var inputNickname = document.getElementById("inputNickname").value.toLowerCase();
 	var finalNickname = inputNickname.replace(/\s+/g, '');
 	getValue();
 	document.getElementById("bodycontainer1").style.display = "none";
@@ -255,7 +255,7 @@ function submitData(){
 }
 
 function totalscore(score) {
-	var inputNickname = document.getElementById("inputNickname").value;
+	var inputNickname = document.getElementById("inputNickname").value.toLowerCase();
 	var finalNickname = inputNickname.replace(/\s+/g, '');
 	const fb = firebase.database().ref();
 	var data = {total_score:score};
@@ -264,7 +264,7 @@ function totalscore(score) {
 }
 
 function pushTotalScore(score){
-	var inputNickname = document.getElementById("inputNickname").value;
+	var inputNickname = document.getElementById("inputNickname").value.toLowerCase();
 	var finalNickname = inputNickname.replace(/\s+/g, '');
 	var firebaseRef = firebase.database().ref('leaderboard/'+finalNickname);
 	firebaseRef.set({
