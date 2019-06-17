@@ -58,70 +58,84 @@
 		<div class="container2">
 			<progress value="0" max="25" id="progressBar"></progress>
 			<div class="box">
-				<img src="/res/bca.png" width="100px" height="100px" alt="qimg">
-				<div class="question">Warna logo BCA?</div> 
+				<div class="question">Kapan fitur GO-PAY diluncurkan?</div> 
 	
 				<div class="ansrow-1">
-					 <input id="ans-1" type="radio" name="question1" value="a">  Kelabu  <br>
-					 <input id="ans-2" type="radio" name="question1" value="b">  Hijau
+					 <input id="ans-1" type="radio" name="question1" value="a">
+					 <label for="ans-1">2011</label><br>
+					 <input id="ans-2" type="radio" name="question1" value="b">  2015
+					 <label for="ans-2">2015</label><br>
 				</div>
 				<div class="ansrow-2">
-					 <input id="ans-3" type="radio" name="question1" value="c" onclick="clicked1()">  Biru <br>
-					 <input id="ans-4" type="radio" name="question1" value="d">  Saya buta warna
+					 <input id="ans-3" type="radio" name="question1" value="c" onclick="clicked1()">
+					 <label for="ans-3">2016</label> <br>
+					 <input id="ans-4" type="radio" name="question1" value="d">   
+					 <label for="ans-4">2017</label> <br>
 				</div>
 			</div>
 	
 			<div class="box">
-				<img src="/res/wheel1.png" width="100px" height="100px" alt="qimg">
-				<div class="question">Gambar logo Go-Jek?</div> 
+				<div class="question">Apa bentuk logo BCA?</div> 
 		
 				<div class="ansrow-1">
-					<input id="ans-5" type="radio" name="question2" value="a">Kapal Pesiar<br>
-					<input id="ans-6" type="radio" name="question2" value="b" >Pesawat
+					<input id="ans-5" type="radio" name="question2" value="a">
+					<label for="ans-5">Jengkol</label> <br>
+					<input id="ans-6" type="radio" name="question2" value="b" >
+					<label for="ans-6">Gandum</label>
 				</div>
 				<div class="ansrow-2">
 					<input id="ans-7" type="radio" name="question2" value="c" >Roket<br>
+					<label for="ans-7">Padi</label> <br>
 					<input id="ans-8" type="radio" name="question2" value="d" onclick="clicked2()">Motor
+					<label for="ans-8">Cengkeh </label>
 				</div>
 			</div>
 			<div class="box">
-				<img src="/res/wheel1.png" width="100px" height="100px" alt="qimg">
-				<div class="question">Fitur apa yang tidak ada di Go-Jek?</div> 
+				<div class="question">Negara mana yang merupakan daerah ekspansi Go-Jek?</div> 
 	
 				<div class="ansrow-1">
-					<input id="ans-9" type="radio" name="question3" value="a">Go-Ride<br>
-					<input id="ans-10" type="radio" name="question3" value="b" >Go-Car
+					<input id="ans-9" type="radio" name="question3" value="a">
+					<label for="ans-9">Laos</label> <br>
+					<input id="ans-10" type="radio" name="question3" value="b" >
+					<label for="ans-10">Timor Leste</label>
 			   </div>
 			   <div class="ansrow-2">
-					<input id="ans-11" type="radio" name="question3" value="c">Go-Send<br>
-					<input id="ans-12" type="radio" name="question3" value="d" onclick="clicked3()">Go-Message
+					<input id="ans-11" type="radio" name="question3" value="c">
+					<label for="ans-11">Malaysia</label> <br>
+					<input id="ans-12" type="radio" name="question3" value="d" onclick="clicked3()">
+					<label for="ans-12">Thailand </label>
 			   </div>
 			</div>
 			<div class="box">
-				9
-				<img src="/res/wheel1.png" width="100px" height="100px" alt="qimg">
-				<div class="question">Berapa besar saldo minimum untuk membuka rekening tahapan BCA?</div> 
+				<div class="question">Berikut ini adalah nama partner cobranding produk kartu kredit BCA saat ini, kecuali :</div> 
 	
-			<div class="ansrow-1">
-					<input id="ans-13" type="radio" name="question4" value="a">Rp.0<br>
-					<input id="ans-14" type="radio" name="question4" value="b">Rp.1
+				<div class="ansrow-1">
+					<input id="ans-13" type="radio" name="question4" value="a">
+					<label for="ans-13">Singapore Airline</label> <br>
+					<input id="ans-14" type="radio" name="question4" value="b">
+					<label for="ans-14">Bank Woori Saudara</label>
 				</div>
 				<div class="ansrow-2">
-					<input id="ans-15" type="radio" name="question4" value="c">Rp.20,000<br>
-					<input id="ans-16" type="radio" name="question4" value="d" onclick="clicked4()">Rp.500,000
+					<input id="ans-15" type="radio" name="question4" value="c">
+					<label for="ans-15">Indomaret</label> <br>
+					<input id="ans-16" type="radio" name="question4" value="d" onclick="clicked4()">						
+					<label for="ans-16">Carrefour</label>
 				</div>
 			</div>
 			<div class="box">
-			<img src="/res/wheel1.png" width="100px" height="100px" alt="qimg">
-			<div class="question">Dimana Kita tidak bisa mengisi saldo Go-Pay?</div> 
+			<div class="question">Berikut ini yang mana bukan merupakan bagian dari Gojek Ecosystem?</div> 
 	
 			<div class="ansrow-1">
-				<input id="ans-17" type="radio" name="question5" value="a" onclick="clicked5()">Jalanan<br>
-				<input id="ans-18" type="radio" name="question5" value="b">ATM
+				<input id="ans-17" type="radio" name="question5" value="a" onclick="clicked5()">
+				<label for="ans-17">Admin</label> <br>
+				<input id="ans-18" type="radio" name="question5" value="b">
+				<label for="ans-18">Talent</label>
 			</div>
 			<div class="ansrow-2">
-				<input id="ans-19" type="radio" name="question5" value="c">Minimarket<br>
-				<input id="ans-20" type="radio" name="question5" value="d">Supir Go-Jek
+				<input id="ans-19" type="radio" name="question5" value="c">
+				<label for="ans-19">User</label> <br>
+				<input id="ans-20" type="radio" name="question5" value="d">
+				<label for="ans-20">Merchant</label>
 			</div>
 			</div>
 	

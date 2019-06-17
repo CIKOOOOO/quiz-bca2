@@ -89,8 +89,9 @@ body{
 /* mainquiz */
 
 #bodycontainer2{
-    background-color: blue;
+    background-color: #26a8a3;
     display: none;
+    position: relative;
     margin: 0px;
     padding: 5px;
     width: 100%;
@@ -132,16 +133,62 @@ body{
 }
 
 .ansrow-1{
-    width: 46%;
+    width: 50%;
     height: 80px;
     float: left;
-    padding-left: 4%;
+    text-align: center;
 }
 
+.ansrow-1 input[type="radio"]{
+    display: none;
+}
+
+.ansrow-1 label {
+    display:inline-block;
+    background-color:#ddd;
+    padding: 20px 0px;
+    font-size:16px;
+    border: 1px solid #444;
+    width: 98%;
+}
+
+.ansrow-1 input[type="radio"]:checked + label { 
+    background-color:#bfb;
+    border-color: #4c4;
+}
+
+.ansrow-1 label:hover {
+    background-color: #dfd;
+  }
+
+
 .ansrow-2{
-    width: 42%;
+    width: 50%;
     float: left;
-    padding-left: 8%;
+    padding-left: 0%;
+    text-align: center;
+}
+
+.ansrow-2 input[type="radio"]{
+    display: none;
+}
+
+.ansrow-2 label {
+    display:inline-block;
+    background-color:#ddd;
+    padding: 20px 0px;
+    font-size:16px;
+    border: 1px solid #444;
+    width: 98%;
+}
+
+.ansrow-2 input[type="radio"]:checked + label { 
+    background-color:#bfb;
+    border-color: #4c4;
+}
+
+.ansrow-2 label:hover {
+    background-color: #dfd;
 }
 
  #ans-4, #ans-8, #ans-2, #ans-6{
