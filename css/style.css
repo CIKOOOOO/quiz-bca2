@@ -302,7 +302,7 @@ body{
     }
   }
 
-  @media screen and (min-width:480px) and (orientation:landscape){ 
+  /* @media screen and (min-width:480px) and (orientation:landscape){ 
     html{
         background-image: url("../res/portraitonly.png");
         background-repeat: repeat;
@@ -313,4 +313,4 @@ body{
         display: none;
         visibility: hidden;
     }
-}
+    } */
