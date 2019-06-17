@@ -111,13 +111,13 @@
 	
 				<div class="ansrow-1">
 					<input id="ans-13" type="radio" name="question4" value="a">
-					<label for="ans-13">Singapore Airline</label> <br>
+					<label for="ans-13">Singapore<br>Airline</label> <br>
 					<input id="ans-14" type="radio" name="question4" value="b">
-					<label for="ans-14">Bank Woori Saudara</label>
+					<label for="ans-14">Indomaret</label>
 				</div>
 				<div class="ansrow-2">
 					<input id="ans-15" type="radio" name="question4" value="c">
-					<label for="ans-15">Indomaret</label> <br>
+					<label for="ans-15">Bank Woori Saudara</label> <br>
 					<input id="ans-16" type="radio" name="question4" value="d" onclick="clicked4()">						
 					<label for="ans-16">Carrefour</label>
 				</div>
