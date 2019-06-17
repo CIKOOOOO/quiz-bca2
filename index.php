@@ -117,7 +117,7 @@
 				</div>
 				<div class="ansrow-2">
 					<input id="ans-15" type="radio" name="question4" value="c">
-					<label for="ans-15">Bank Woori Saudara</label> <br>
+					<label for="ans-15">Bank Woori<br>Saudara</label> <br>
 					<input id="ans-16" type="radio" name="question4" value="d" onclick="clicked4()">						
 					<label for="ans-16">Carrefour</label>
 				</div>
