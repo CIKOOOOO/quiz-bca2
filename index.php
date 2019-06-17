@@ -63,7 +63,7 @@
 				<div class="ansrow-1">
 					 <input id="ans-1" type="radio" name="question1" value="a">
 					 <label for="ans-1">2011</label><br>
-					 <input id="ans-2" type="radio" name="question1" value="b">  2015
+					 <input id="ans-2" type="radio" name="question1" value="b">
 					 <label for="ans-2">2015</label><br>
 				</div>
 				<div class="ansrow-2">
@@ -84,9 +84,9 @@
 					<label for="ans-6">Gandum</label>
 				</div>
 				<div class="ansrow-2">
-					<input id="ans-7" type="radio" name="question2" value="c" >Roket<br>
+					<input id="ans-7" type="radio" name="question2" value="c" >
 					<label for="ans-7">Padi</label> <br>
-					<input id="ans-8" type="radio" name="question2" value="d" onclick="clicked2()">Motor
+					<input id="ans-8" type="radio" name="question2" value="d" onclick="clicked2()">
 					<label for="ans-8">Cengkeh </label>
 				</div>
 			</div>
