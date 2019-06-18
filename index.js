@@ -1,7 +1,7 @@
 var arr = [];
 var checkId = firebase.database().ref("users");
-var MAX_PROGRESS_TIME = 10;
-var ANTI_ZERO = 9;
+var MAX_PROGRESS_TIME = 45;
+var ANTI_ZERO = 44;
 
 checkId.once("value")
 .then(function(snapshot){
