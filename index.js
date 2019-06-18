@@ -193,8 +193,10 @@ function clicked5(){
 
 function getValue(){
 	var ans1 = 0, ans2 = 0, ans3=0, ans4=0, ans5 = 0;
+	var prog1 = parseInt(document.getElementById("quest1").value);
 	if(document.getElementById('ans-3').checked){
-		ans1 += 20*(25-parseInt(document.getElementById("quest1").value));
+		// if(parseInt(document.getElementById("quest1").value) == 0)
+		ans1 += 20*(25-prog1);
 	}
 	else ans1 += 5;
 
