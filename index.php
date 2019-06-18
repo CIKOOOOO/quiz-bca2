@@ -56,7 +56,7 @@
 	<!-- screen 2 -->
 	<div id="bodycontainer2">
 		<div class="container2">
-			<progress value="0" max="25" id="progressBar"></progress>
+			<progress value="0" max="10" id="progressBar"></progress>
 			<div class="box">
 				<div class="question">Kapan fitur GO-PAY diluncurkan?</div> 
 	
