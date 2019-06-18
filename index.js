@@ -237,7 +237,7 @@ function getValue(){
 	}
 	else ans5 += 5;
 
-	console.log(ans5+" - "+prog5);
+	console.log(ans4+" - "+prog4);
 	
 
 	// updateData(ans1,ans2,ans3,ans4,ans5);
