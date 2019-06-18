@@ -195,8 +195,12 @@ function clicked5(){
 function getValue(){
 	var ans1 = 0, ans2 = 0, ans3=0, ans4=0, ans5 = 0;
 	var prog1 = parseInt(document.getElementById("quest1").value);
+	var prog2 = parseInt(document.getElementById("quest2").value);
+	var prog3 = parseInt(document.getElementById("quest3").value);
+	var prog4 = parseInt(document.getElementById("quest4").value);
+	var prog5 = parseInt(document.getElementById("quest5").value);
+	
 	if(document.getElementById('ans-3').checked){
-		// if(parseInt(document.getElementById("quest1").value) == 0)
 		if(isNaN(prog1)) prog1 = 1;
 		else if(prog1 > 24) prog1 = 24;
 		ans1 += 20*(25-prog1);
@@ -204,27 +208,34 @@ function getValue(){
 	else ans1 += 5;
 
 	if(document.getElementById('ans-8').checked){
-		ans2 += 20*(25-parseInt(document.getElementById("quest2").value));
+		if(isNaN(prog2)) prog2 = 1;
+		else if(prog2 > 24) prog2 = 24;
+		ans2 += 20*(25-prog2);
 	}
-
 	else ans2 += 5;
 
 	if(document.getElementById('ans-12').checked){
-		ans3 += 20*(25-parseInt(document.getElementById("quest3").value));
+		if(isNaN(prog3)) prog3 = 1;
+		else if(prog3 > 24) prog3 = 24;
+		ans3 += 20*(25-prog3);
 	}
 	else ans3 += 5;
 
 	if(document.getElementById('ans-16').checked){
-		ans4 += 20*(25-parseInt(document.getElementById("quest4").value));
+		if(isNaN(prog4)) prog4 = 1;
+		else if(prog4 > 24) prog4 = 24;
+		ans4 += 20*(25-prog4);
 	}
 	else ans4 += 5;
 
 	if(document.getElementById('ans-17').checked){
-		ans5 += 20*(25-parseInt(document.getElementById("quest5").value));
+		if(isNaN(prog5)) prog5 = 1;
+		else if(prog5 > 24) prog5 = 24;
+		ans5 += 20*(25-prog5);
 	}
 	else ans5 += 5;
 
-	console.log(ans1+" - "+prog1);
+	console.log(ans2+" - "+prog2);
 	
 
 	// updateData(ans1,ans2,ans3,ans4,ans5);
