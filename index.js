@@ -197,6 +197,7 @@ function getValue(){
 	var prog1 = parseInt(document.getElementById("quest1").value);
 	if(document.getElementById('ans-3').checked){
 		// if(parseInt(document.getElementById("quest1").value) == 0)
+		if(isNaN(prog1)) console.log("i am NaN");
 		ans1 += 20*(25-prog1);
 	}
 	else ans1 += 5;
