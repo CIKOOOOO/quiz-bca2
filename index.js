@@ -2,6 +2,8 @@ var arr = [];
 var checkId = firebase.database().ref("users");
 var MAX_PROGRESS_TIME = 45;
 var ANTI_ZERO = 44;
+var BASE_SCORE = 20;
+var WRONG_SCORE = 5;
 
 checkId.once("value")
 .then(function(snapshot){
@@ -97,8 +99,6 @@ function trueCond(){
 	downloadTimer = setInterval(function(){
 		document.getElementById("progressBar").value = MAX_PROGRESS_TIME - timeleft;
 		timeleft -= 1;
-		console.log(timeleft);
-		
 		if(timeleft == -2){
 			submitData();
 			clearInterval(downloadTimer);
@@ -143,37 +143,37 @@ function getValue(){
 	if(document.getElementById('ans-3').checked){
 		if(isNaN(prog1)) prog1 = 1;
 		else if(prog1 > ANTI_ZERO) prog1 = ANTI_ZERO;
-		ans1 += 20*(MAX_PROGRESS_TIME - prog1);
+		ans1 += BASE_SCORE * (MAX_PROGRESS_TIME - prog1);
 	}
-	else ans1 += 5;
+	else ans1 += WRONG_SCORE;
 
 	if(document.getElementById('ans-8').checked){
 		if(isNaN(prog2)) prog2 = 1;
 		else if(prog2 > ANTI_ZERO) prog2 = ANTI_ZERO;
-		ans2 += 20*(MAX_PROGRESS_TIME - prog2);
+		ans2 += BASE_SCORE * (MAX_PROGRESS_TIME - prog2);
 	}
-	else ans2 += 5;
+	else ans2 += WRONG_SCORE;
 
 	if(document.getElementById('ans-12').checked){
 		if(isNaN(prog3)) prog3 = 1;
 		else if(prog3 > ANTI_ZERO) prog3 = ANTI_ZERO;
-		ans3 += 20*(MAX_PROGRESS_TIME - prog3);
+		ans3 += BASE_SCORE * (MAX_PROGRESS_TIME - prog3);
 	}
-	else ans3 += 5;
+	else ans3 += WRONG_SCORE;
 
 	if(document.getElementById('ans-16').checked){
 		if(isNaN(prog4)) prog4 = 1;
 		else if(prog4 > ANTI_ZERO) prog4 = ANTI_ZERO;
-		ans4 += 20*(MAX_PROGRESS_TIME - prog4);
+		ans4 += BASE_SCORE * (MAX_PROGRESS_TIME - prog4);
 	}
-	else ans4 += 5;
+	else ans4 += WRONG_SCORE;
 
 	if(document.getElementById('ans-17').checked){
 		if(isNaN(prog5)) prog5 = 1;
 		else if(prog5 > ANTI_ZERO) prog5 = ANTI_ZERO;
-		ans5 += 20*(MAX_PROGRESS_TIME - prog5);
+		ans5 += BASE_SCORE * (MAX_PROGRESS_TIME - prog5);
 	}
-	else ans5 += 5;
+	else ans5 += WRONG_SCORE;
 
 	updateData(ans1,ans2,ans3,ans4,ans5);
 }
