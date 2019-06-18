@@ -40,7 +40,10 @@ function showTotalScore(){
 				}
 
 				for (let index = 1; index <= TOTAL_QUIZ; index++) {
-					document.getElementById("p"+index).innerHTML = quiz[index];
+					if(quiz[index]=='5')
+						document.getElementById("p"+index).innerHTML = quiz[index]+" <b style='color:red'>(X)</b>";
+					else 
+						document.getElementById("p"+index).innerHTML = quiz[index];
 					total_point += quiz[index];
 				}
 
@@ -215,7 +218,7 @@ function submitData(){
 
 		for (let index = 1; index <= TOTAL_QUIZ; index++) {
 			if(quiz[index]=='5')
-				document.getElementById("p"+index).innerHTML = quiz[index]+" (X)";
+				document.getElementById("p"+index).innerHTML = quiz[index]+" <b style='color:red'>(X)</b>";
 			else 
 				document.getElementById("p"+index).innerHTML = quiz[index];
 			total_point += quiz[index];
