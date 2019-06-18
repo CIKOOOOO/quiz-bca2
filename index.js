@@ -4,6 +4,7 @@ var MAX_PROGRESS_TIME = 45;
 var ANTI_ZERO = 44;
 var BASE_SCORE = 20;
 var WRONG_SCORE = 5;
+var TOTAL_QUIZ = 20;
 
 checkId.once("value")
 .then(function(snapshot){
@@ -34,11 +35,11 @@ function showTotalScore(){
 				var total_point = 0;
 				var nickname;
 
-				for (let index = 1; index <= 20; index++) {
+				for (let index = 1; index <= TOTAL_QUIZ; index++) {
 					quiz[index] = snapshot.child("quiz"+index).val();
 				}
 
-				for (let index = 1; index <= 20; index++) {
+				for (let index = 1; index <= TOTAL_QUIZ; index++) {
 					document.getElementById("p"+index).innerHTML = quiz[index];
 					total_point += quiz[index];
 				}
@@ -208,11 +209,11 @@ function submitData(){
 		var total_point = 0;
 		var nickname = snapshot.child("nickname").val();
 
-		for (let index = 1; index <= 20; index++) {
+		for (let index = 1; index <= TOTAL_QUIZ; index++) {
 			quiz[index] = snapshot.child("quiz"+index).val();
 		}
 
-		for (let index = 1; index <= 20; index++) {
+		for (let index = 1; index <= TOTAL_QUIZ; index++) {
 			document.getElementById("p"+index).innerHTML = quiz[index];
 			total_point += quiz[index];
 		}
