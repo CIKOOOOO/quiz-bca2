@@ -1,5 +1,6 @@
 var arr = [];
 var checkId = firebase.database().ref("users");
+var MAX_PROGRESS_TIME = 25;
 
 checkId.once("value")
 .then(function(snapshot){
@@ -130,9 +131,9 @@ function trueCond(){
 	document.getElementById("bodycontainer3").style.display = "none";
 	document.getElementById("bodycontainer2").style.display = "block";
 
-	var timeleft = 25;
+	var timeleft = MAX_PROGRESS_TIME;
 	downloadTimer = setInterval(function(){
-		document.getElementById("progressBar").value = 25 - timeleft;
+		document.getElementById("progressBar").value = MAX_PROGRESS_TIME - timeleft;
 		timeleft -= 1;
 		console.log(timeleft);
 		
@@ -203,39 +204,39 @@ function getValue(){
 	if(document.getElementById('ans-3').checked){
 		if(isNaN(prog1)) prog1 = 1;
 		else if(prog1 > 24) prog1 = 24;
-		ans1 += 20*(25-prog1);
+		ans1 += 20*(MAX_PROGRESS_TIME-prog1);
 	}
 	else ans1 += 5;
 
 	if(document.getElementById('ans-8').checked){
 		if(isNaN(prog2)) prog2 = 1;
 		else if(prog2 > 24) prog2 = 24;
-		ans2 += 20*(25-prog2);
+		ans2 += 20*(MAX_PROGRESS_TIME-prog2);
 	}
 	else ans2 += 5;
 
 	if(document.getElementById('ans-12').checked){
 		if(isNaN(prog3)) prog3 = 1;
 		else if(prog3 > 24) prog3 = 24;
-		ans3 += 20*(25-prog3);
+		ans3 += 20*(MAX_PROGRESS_TIME-prog3);
 	}
 	else ans3 += 5;
 
 	if(document.getElementById('ans-16').checked){
 		if(isNaN(prog4)) prog4 = 1;
 		else if(prog4 > 24) prog4 = 24;
-		ans4 += 20*(25-prog4);
+		ans4 += 20*(MAX_PROGRESS_TIME-prog4);
 	}
 	else ans4 += 5;
 
 	if(document.getElementById('ans-17').checked){
 		if(isNaN(prog5)) prog5 = 1;
 		else if(prog5 > 24) prog5 = 24;
-		ans5 += 20*(25-prog5);
+		ans5 += 20*(MAX_PROGRESS_TIME-prog5);
 	}
 	else ans5 += 5;
 
-	console.log(ans2+" - "+prog2);
+	console.log(ans3+" - "+prog3);
 	
 
 	// updateData(ans1,ans2,ans3,ans4,ans5);
