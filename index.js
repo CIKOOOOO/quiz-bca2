@@ -223,7 +223,7 @@ function getValue(){
 
 	console.log(document.getElementById("quest1").value+" - "+document.getElementById("quest2").value+" - "+document.getElementById("quest3").value+" - "+document.getElementById("quest4").value+" - "+document.getElementById("quest5").value);
 
-	updateData(ans1,ans2,ans3,ans4,ans5);
+	// updateData(ans1,ans2,ans3,ans4,ans5);
 }
 
 function updateData(q1, q2, q3, q4, q5) {
