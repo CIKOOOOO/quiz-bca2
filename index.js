@@ -222,7 +222,8 @@ function getValue(){
 	}
 	else ans5 += 5;
 
-	console.log(document.getElementById("quest1").value+" - "+document.getElementById("quest2").value+" - "+document.getElementById("quest3").value+" - "+document.getElementById("quest4").value+" - "+document.getElementById("quest5").value);
+	console.log(ans1+" - "+prog1);
+	
 
 	// updateData(ans1,ans2,ans3,ans4,ans5);
 }
