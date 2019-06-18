@@ -136,10 +136,13 @@ function trueCond(){
 	downloadTimer = setInterval(function(){
 		document.getElementById("progressBar").value = 25 - timeleft;
 		timeleft -= 1;
+		console.log(timeleft);
+		
 		if(timeleft == -2){
 			submitData();
 			clearInterval(downloadTimer);
 		}
+
 	}, 1000);
 }
 
