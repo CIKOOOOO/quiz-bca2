@@ -12,7 +12,6 @@ checkId.once("value")
 });
 
 function showTotalScore(){
-	var firebaseRef = firebase.database();
 	var finalNickname = document.getElementById("inputNickname").value.toLowerCase();
 	var checkNick = firebase.database().ref("users");
 
@@ -43,7 +42,6 @@ function showTotalScore(){
 				}
 
 				nickname = snapshot.child("nickname").val();
-				console.log(nickname);
 				document.getElementById("nickname").innerHTML = nickname;
 				document.getElementById("score").innerHTML = total_point;
 			});
@@ -56,66 +54,29 @@ function showTotalScore(){
 }
 
 function submitClick(){
-	var firebaseRef = firebase.database();
 	var finalNickname = document.getElementById("inputNickname").value.toLowerCase();
 	var checkNick = firebase.database().ref("users");
 	document.documentElement.scrollTop = 0;
 
-	// if(finalNickname != ""){
-		loadsc();
-		checkNick.once("value")
-		.then(function(snapshot){
-			if(snapshot.hasChild(finalNickname)){
-				firebase.database().ref(`users/${finalNickname}/`).once("value", snapshot => {
-					if (snapshot.child("quiz6").val() != 0 || snapshot.child("quiz7").val() != 0){
-						window.alert("Cannot enter the game");
-						removeLoad();
-					 }
-					 else{
-						trueCond();
-					 }
-				 });
-			}
-			else{
-				window.alert("Id Not Found");
-				removeLoad();
-				// firebaseRef.ref('users/'+finalNickname).set({
-				// 	quiz1 : 0,
-				// 	quiz2 : 0,
-				// 	quiz3 : 0,
-				// 	quiz4 : 0,
-				// 	quiz5 : 0,
-				// 	quiz6 : 0,
-				// 	quiz7 : 0,
-				// 	quiz8 : 0,
-				// 	quiz9 : 0,
-				// 	quiz10 : 0,
-				// 	quiz11 : 0,
-				// 	quiz12 : 0,
-				// 	quiz13 : 0,
-				// 	quiz14 : 0,
-				// 	quiz15 : 0,
-				// 	quiz16 : 0,
-				// 	quiz17 : 0,
-				// 	quiz18 : 0,
-				// 	quiz19 : 0,
-				// 	quiz20 : 0,
-				// 	total_score : 0
-				// },function(error){
-				// 	if(error){
-				// 		window.alert("Error");
-				// 		removeLoad();
-				// 	}
-				// 	else{
-				// 		trueCond();
-				// 	}
-				// });
-			}
-		});	
-	// }
-	// else{
-	// 	window.alert("nickname tidak boleh kosong!")
-	// }
+	loadsc();
+	checkNick.once("value")
+	.then(function(snapshot){
+		if(snapshot.hasChild(finalNickname)){
+			firebase.database().ref(`users/${finalNickname}/`).once("value", snapshot => {
+				if (snapshot.child("quiz6").val() != 0 || snapshot.child("quiz7").val() != 0){
+					window.alert("Cannot enter the game");
+					removeLoad();
+				 }
+				 else{
+					trueCond();
+				 }
+			 });
+		}
+		else{
+			window.alert("Id Not Found");
+			removeLoad();
+		}
+	});	
 }
 	
 
@@ -156,41 +117,18 @@ function clicked1(){
 
 function clicked2(){
 	document.getElementById("quest2").setAttribute("value",document.getElementById("progressBar").value);
-	// document.getElementById("ans-7").addEventListener("click",function(event){
-	// 	console.log(document.getElementById("progressBar").value);
-	// 	document.getElementById("quest2").setAttribute("value",document.getElementById("progressBar").value);
-	
-	// 	// time2 = document.getElementById("progressBar").value;
-	// });
 }
 
 function clicked3(){
 	document.getElementById("quest3").setAttribute("value",document.getElementById("progressBar").value);
-	// document.getElementById("ans-10").addEventListener("click",function(event){
-	// 	console.log(document.getElementById("progressBar").value);
-	// 	document.getElementById("quest3").setAttribute("value",document.getElementById("progressBar").value);
-	
-	// 	// time3 = document.getElementById("progressBar").value;
-	// });
 }
 
 function clicked4(){
 	document.getElementById("quest4").setAttribute("value",document.getElementById("progressBar").value);
-	// document.getElementById("ans-13").addEventListener("click",function(event){
-	// 	console.log(document.getElementById("progressBar").value);
-	// 	document.getElementById("quest4").setAttribute("value",document.getElementById("progressBar").value);
-	// 	// time4 = document.getElementById("progressBar").value;
-	// });
 }
 
 function clicked5(){
 	document.getElementById("quest5").setAttribute("value",document.getElementById("progressBar").value);
-		
-	// document.getElementById("ans-18").addEventListener("click",function(event){
-	// 	console.log(document.getElementById("progressBar").value);
-	// 	document.getElementById("quest5").setAttribute("value",document.getElementById("progressBar").value);
-	// 	// time5 = document.getElementById("progressBar").value;
-	// });
 }
 
 
@@ -237,10 +175,7 @@ function getValue(){
 	}
 	else ans5 += 5;
 
-	console.log(ans4+" - "+prog4);
-	
-
-	// updateData(ans1,ans2,ans3,ans4,ans5);
+	updateData(ans1,ans2,ans3,ans4,ans5);
 }
 
 function updateData(q1, q2, q3, q4, q5) {
