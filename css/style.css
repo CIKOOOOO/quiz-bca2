@@ -89,7 +89,7 @@ body{
 /* mainquiz */
 
 #bodycontainer2{
-    background-color: url("../res/background.png");
+    background-image: url("../res/background.png");
     background-repeat: round;
     background-size: contain;
     display: none;
