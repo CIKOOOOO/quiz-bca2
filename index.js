@@ -26,6 +26,9 @@ function showTotalScore(){
 			document.getElementById("bodycontainer1").style.display = "none";
 			document.getElementById("bodycontainer3").style.display = "block";
 			document.getElementById("bodycontainer2").style.display = "none";
+			document.documentElement.scrollTop = 0;
+
+			window.scrollTo(0, document.body.scrollHeight);
 
 			firebase.database()
 			.ref(`users/${finalNickname}/`)
@@ -203,6 +206,8 @@ function submitData(){
 	document.getElementById("bodycontainer3").style.display = "block";
 	document.getElementById("bodycontainer2").style.display = "none";
 	document.documentElement.scrollTop = 0;
+
+	window.scrollTo(0, document.body.scrollHeight);
 
 	firebase.database()
 	.ref(`users/${finalNickname}/`)
